@@ -16,22 +16,21 @@ public class Main {
 
     public static void task1() {
         task(1);
-        isNotLeap(100);
+        isNotLeap(4);
     }
 
-    public static boolean isNotLeap(int year) {
-        boolean notLeap = year % 100 == 0 && year % 4 != 0 || year % 100 == 0 && year % 400 != 0;
+    public static int isNotLeap(int year) {
         System.out.printf("The year %d is ", year);
-        if (notLeap) {
+        if (year % 100 == 0 && year % 4 != 0 || year % 100 == 0 && year % 400 != 0) {
             System.out.print("not leap");
         } else {
             System.out.println("leap");
         }
-        return notLeap;
+        return year;
     }
 
     public static int defineOs(int clientOS, int clientDeviceYear) {
-        if (clientDeviceYear < 2015) {
+        if (clientDeviceYear < 2022) {
             if (clientOS == 1) {
                 System.out.print("Install the app for Android by the link, please!");
             }
